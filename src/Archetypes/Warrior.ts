@@ -1,21 +1,21 @@
 import Archetypes from './Archetypes';
 
 class Warrior extends Archetypes {
-  private $energyType: 'stamina' = 'stamina';
+  private _energyType: 'stamina' = 'stamina';
 
-  private static $createdArchetypeInstances = 0;
+  private static _createdArchetypeInstances = 0;
 
   constructor(name: string) {
     super(name);
-    Warrior.$createdArchetypeInstances += 1;
+    Warrior._createdArchetypeInstances += 1;
   }
 
   static createdArchetypeInstances(): number {
-    return this.$createdArchetypeInstances;
+    return this._createdArchetypeInstances;
   }
 
   get energyType() {
-    return this.$energyType;
+    return this._energyType;
   }
 }
 
